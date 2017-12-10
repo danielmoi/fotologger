@@ -8,28 +8,36 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var itemImageView: UIImageView!
     
     @IBOutlet weak var titleTextField: UITextField!
     
-
+    var imagePicker = UIImagePickerController()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    @IBAction func cameraTapped(_ sender: Any) {
+        
+        imagePicker.delegate = self
     }
     
     @IBAction func photosTapped(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func cameraTapped(_ sender: Any) {
+        print("HELLO")
+    }
+    
+    
+    
     
     @IBAction func addTapped(_ sender: Any) {
     }
     
-
+    
 }

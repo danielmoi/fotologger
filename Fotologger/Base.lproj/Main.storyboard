@@ -24,7 +24,7 @@
                     <navigationItem key="navigationItem" id="3jr-e7-aPw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FWk-C3-35H">
                             <connections>
-                                <segue destination="OlK-nJ-X2D" kind="show" id="8hR-ob-3He"/>
+                                <segue destination="OlK-nJ-X2D" kind="show" id="le4-DQ-IAK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -76,7 +76,7 @@
                                 <rect key="frame" x="172" y="394" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="addTapped:" destination="OlK-nJ-X2D" eventType="touchUpInside" id="ShW-r0-pBf"/>
+                                    <action selector="addTapped:" destination="OlK-nJ-X2D" eventType="touchUpInside" id="3lE-g5-zTj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,12 +96,12 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="camera" id="bfn-9C-SjX">
                                 <connections>
-                                    <action selector="photosTapped:" destination="OlK-nJ-X2D" id="rLe-uT-Aq9"/>
+                                    <action selector="cameraTapped:" destination="OlK-nJ-X2D" id="PmZ-QU-3LH"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Photos" id="jty-ND-UX4">
                                 <connections>
-                                    <action selector="cameraTapped:" destination="OlK-nJ-X2D" id="dL4-9G-jLt"/>
+                                    <action selector="photosTapped:" destination="OlK-nJ-X2D" id="Sez-Kr-cKV"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
