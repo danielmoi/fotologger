@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="-609"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="gtO-jD-dqy">
             <objects>
-                <viewController id="OlK-nJ-X2D" sceneMemberID="viewController">
+                <viewController id="OlK-nJ-X2D" customClass="DetailsViewController" customModule="Fotologger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Qt-ZF-56Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEh-op-WBj">
                                 <rect key="frame" x="172" y="394" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="OlK-nJ-X2D" eventType="touchUpInside" id="ShW-r0-pBf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,10 +94,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="rCA-wZ-XAP">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="bfn-9C-SjX"/>
-                            <barButtonItem title="Photos" id="jty-ND-UX4"/>
+                            <barButtonItem systemItem="camera" id="bfn-9C-SjX">
+                                <connections>
+                                    <action selector="photosTapped:" destination="OlK-nJ-X2D" id="rLe-uT-Aq9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="jty-ND-UX4">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="OlK-nJ-X2D" id="dL4-9G-jLt"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="itemImageView" destination="DWC-tR-mik" id="kmA-yU-KW1"/>
+                        <outlet property="titleTextField" destination="Yms-8j-MDJ" id="Css-PY-gzW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cG7-fe-fVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
