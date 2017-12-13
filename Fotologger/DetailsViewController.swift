@@ -53,7 +53,9 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
-        print("HELLO")
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
     }
     
     
