@@ -60,11 +60,18 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func addTapped(_ sender: Any) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let item = Item(context: context);
-        item.title = titleTextField.text;
-        item.image = UIImagePNGRepresentation(itemImageView.image!);
+        if (item != nil) {
+            item!.title = titleTextField.text;
+            item!.image = UIImagePNGRepresentation(itemImageView.image!);
+        } else {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let item = Item(context: context);
+            item.title = titleTextField.text;
+            item.image = UIImagePNGRepresentation(itemImageView.image!);
+        }
+        
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
