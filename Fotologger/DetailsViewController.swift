@@ -79,4 +79,14 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
+    @IBAction func deleteTapped(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(item!)
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
+    }
+    
+    
 }
