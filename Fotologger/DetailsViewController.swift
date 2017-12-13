@@ -51,6 +51,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         item.image = UIImagePNGRepresentation(itemImageView.image!);
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
     }
     
     
