@@ -29,10 +29,15 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             titleTextField.text = item!.title
             
             addUpdateButton.setTitle("Update", for: .normal)
+            
+        } else {
+            deleteButton.isHidden = true
         }
     }
     
     @IBOutlet weak var addUpdateButton: UIButton!
+    
+    @IBOutlet weak var deleteButton: UIButton!
     
     @IBAction func photosTapped(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary

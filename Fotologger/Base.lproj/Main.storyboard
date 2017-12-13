@@ -94,6 +94,13 @@
                                     <action selector="addTapped:" destination="OlK-nJ-X2D" eventType="touchUpInside" id="3lE-g5-zTj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU1-P3-LdD">
+                                <rect key="frame" x="165.5" y="474" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="OlK-nJ-X2D" eventType="touchUpInside" id="uvA-WL-mG6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -102,8 +109,10 @@
                             <constraint firstItem="Yms-8j-MDJ" firstAttribute="centerX" secondItem="7Qt-ZF-56Z" secondAttribute="centerX" id="Dk7-fv-eAX"/>
                             <constraint firstItem="Yms-8j-MDJ" firstAttribute="width" secondItem="DWC-tR-mik" secondAttribute="width" id="H96-dh-tBs"/>
                             <constraint firstItem="Yms-8j-MDJ" firstAttribute="top" secondItem="DWC-tR-mik" secondAttribute="bottom" constant="50" id="K7E-sJ-25w"/>
+                            <constraint firstItem="wU1-P3-LdD" firstAttribute="centerX" secondItem="7Qt-ZF-56Z" secondAttribute="centerX" id="KjE-7l-APw"/>
                             <constraint firstItem="yEh-op-WBj" firstAttribute="top" secondItem="Yms-8j-MDJ" secondAttribute="bottom" constant="50" id="o4R-it-8HB"/>
                             <constraint firstItem="DWC-tR-mik" firstAttribute="top" secondItem="cni-lN-M8t" secondAttribute="top" constant="50" id="pEK-LL-c4N"/>
+                            <constraint firstItem="wU1-P3-LdD" firstAttribute="top" secondItem="yEh-op-WBj" secondAttribute="bottom" constant="50" id="rbR-tv-HUc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cni-lN-M8t"/>
                     </view>
@@ -123,6 +132,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addUpdateButton" destination="yEh-op-WBj" id="IrS-fw-45G"/>
+                        <outlet property="deleteButton" destination="wU1-P3-LdD" id="nDA-uZ-nDv"/>
                         <outlet property="itemImageView" destination="DWC-tR-mik" id="kmA-yU-KW1"/>
                         <outlet property="titleTextField" destination="Yms-8j-MDJ" id="Css-PY-gzW"/>
                     </connections>
