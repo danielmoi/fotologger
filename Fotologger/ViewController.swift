@@ -45,6 +45,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.imageView?.image = UIImage(data: item.image as Data!)
         return cell;
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.row]
+        performSegue(withIdentifier: "itemSegue", sender: item)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! DetailsViewController
+        nextVC.item = sender as? Item
+    }
 
     
 

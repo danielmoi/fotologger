@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" id="3jr-e7-aPw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FWk-C3-35H">
                             <connections>
-                                <segue destination="OlK-nJ-X2D" kind="show" id="le4-DQ-IAK"/>
+                                <segue destination="OlK-nJ-X2D" kind="show" identifier="itemSegue" id="le4-DQ-IAK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -122,6 +122,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="yEh-op-WBj" id="IrS-fw-45G"/>
                         <outlet property="itemImageView" destination="DWC-tR-mik" id="kmA-yU-KW1"/>
                         <outlet property="titleTextField" destination="Yms-8j-MDJ" id="Css-PY-gzW"/>
                     </connections>

@@ -16,12 +16,23 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     var imagePicker = UIImagePickerController()
     
+    var item: Item? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        
+        if item != nil {
+            itemImageView.image = UIImage(data: item!.image as Data!)
+            titleTextField.text = item!.title
+            
+            addUpdateButton.setTitle("Update", for: .normal)
+        }
     }
+    
+    @IBOutlet weak var addUpdateButton: UIButton!
     
     @IBAction func photosTapped(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
